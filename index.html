@@ -403,7 +403,7 @@ if(quoteForm){
     };
     if(!data.name || !data.phone){ showToast('Please enter name and phone', false); return; }
     try{
-      const res = await fetch('http://localhost:3000/send-quote', {
+      const res = await fetch('https://samriddhi-logistics-backend.onrender.com/send-quote', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify(data)
@@ -897,7 +897,7 @@ async function sendEnquiry(form){
   lockForm(form, true, 'Sending...');
 
   try{
-    const res=await fetch('http://localhost:3000/send-enquiry',{
+    const res=await fetch('https://samriddhi-logistics-backend.onrender.com/send-enquiry',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify(payload)
